@@ -4,6 +4,8 @@
 # name or the intended use of these models
 name: 'dbtProject2'
 version: '1.0.0'
+dbt-cloud:
+    project-id: 70471823480061
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'dbtProject2'
@@ -32,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbtProject2:
     # Config indicated by + and applies to all files under models/example/
+    +materialized: view
     example:
       +materialized: view
